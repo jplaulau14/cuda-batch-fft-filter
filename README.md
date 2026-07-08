@@ -71,11 +71,15 @@ After running, the project writes:
 - `output/run.log`: terminal log from `run.sh`
 - `output/summary.csv`: per-file processing statistics
 - `output/filtered/*.csv`: filtered signal outputs
+- `output/proof-input/*.csv`: generated proof input signals used by `run.sh`
 - `artifacts/cuda-batch-fft-filter-proof.zip`: compressed proof bundle
 
 The summary file includes the input file, output file, number of samples,
 frequency cutoff, attenuation value, roughness before filtering, roughness after
 filtering, total batch GPU time, and estimated GPU time per file.
+
+`run.sh` uses `output/proof-input/` for generated proof data so user-provided
+files in `data/input/` are not removed during artifact generation.
 
 This local copy may only contain placeholder artifact folders until the project
 is run inside a CUDA environment. Run `./run.sh` in the Coursera lab to generate
@@ -113,6 +117,7 @@ Filtered signals: output/filtered
 ├── run.sh
 ├── src/main.cu
 ├── data/input/
+├── output/proof-input/
 ├── output/filtered/
 └── artifacts/
 ```
