@@ -2,4 +2,8 @@ batch_fft_filter
 *.exe
 *.o
 .DS_Store
-
+data/input/*.csv
+output/run.log
+output/summary.csv
+output/filtered/*.csv
+artifacts/*.zip
