@@ -3,9 +3,6 @@
 CUDA Advanced Libraries capstone project that filters batches of signal CSV files
 with cuFFT.
 
-Intended public repository URL:
-`https://github.com/jplaulau14/cuda-batch-fft-filter`
-
 The program processes many one-dimensional signal files in a single batched GPU
 FFT pipeline. If no input files exist, it generates synthetic noisy signals,
 runs a forward cuFFT transform, attenuates high-frequency bins with a CUDA
